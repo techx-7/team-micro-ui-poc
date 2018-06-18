@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
-function getBaseLocation() {
+export function getBaseLocation() {
   const paths: string[] = location.pathname.split('/').splice(1, 1);
   const basePath: string = (paths && paths[0]) || 'tech-x';
   return '/' + basePath;
