@@ -1,6 +1,6 @@
 # MicroUiPoc
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
+[Build Status](https://travis-ci.org/techx-7/team-micro-ui-poc.svg?branch=master)
 
 ## Development server
 

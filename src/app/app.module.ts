@@ -1,10 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { APP_BASE_HREF } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
+function getBaseLocation() {
+  const paths: string[] = location.pathname.split('/').splice(1, 1);
+  const basePath: string = (paths && paths[0]) || 'tech-x';
+  return '/' + basePath;
+}
 
 @NgModule({
   declarations: [
@@ -14,7 +20,12 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_BASE_HREF,
+      useFactory: getBaseLocation
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
