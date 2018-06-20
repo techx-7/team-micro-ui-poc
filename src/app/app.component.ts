@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  petSearch = '';
+
+  onEnter(){
+    console.log(this.petSearch );
+
+    //do iframe stuff
+  }
 }
